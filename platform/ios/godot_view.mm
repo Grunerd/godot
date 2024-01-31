@@ -39,6 +39,7 @@
 #include "core/string/ustring.h"
 
 #import <CoreMotion/CoreMotion.h>
+#import <UIKit/UIKit.h>
 
 static const int max_touches = 32;
 static const float earth_gravity = 9.80665;
@@ -60,6 +61,10 @@ static const float earth_gravity = 9.80665;
 
 @property(strong, nonatomic) CMMotionManager *motionManager;
 
+@implementation UIPencilInteraction
+	- (void)pencilInteractionDidTap:(UIPencilInteraction *)interaction {
+        print_error("Pencil Barrel Tap");
+    }
 @end
 
 @implementation GodotView

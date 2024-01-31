@@ -1374,6 +1374,19 @@ void InputEventScreenTouch::_bind_methods() {
 
 ///////////////////////////////////
 
+String InputEventPencilBarrelTap::as_text() const {
+	return "Apple Pencil barrel tap gesture triggered.";
+}
+
+String InputEventPencilBarrelTap::to_string() {
+	return "InputEventPencilBarrelTap";
+}
+
+void InputEventPencilBarrelTap::_bind_methods() {
+}
+
+///////////////////////////////////
+
 void InputEventScreenDrag::set_index(int p_index) {
 	index = p_index;
 }

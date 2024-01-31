@@ -388,6 +388,19 @@ public:
 	InputEventScreenTouch() {}
 };
 
+class InputEventPencilBarrelTap : public InputEventFromWindow {
+	GDCLASS(InputEventPencilBarrelTap, InputEventFromWindow);
+
+protected:
+	static void _bind_methods();
+
+public:
+	virtual String as_text() const override;
+	virtual String to_string() override;
+
+	InputEventPencilBarrelTap() {}
+};
+
 class InputEventScreenDrag : public InputEventFromWindow {
 	GDCLASS(InputEventScreenDrag, InputEventFromWindow);
 	int index = 0;

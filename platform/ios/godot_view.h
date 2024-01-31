@@ -37,10 +37,10 @@ class String;
 @protocol GodotViewRendererProtocol;
 
 @protocol GodotViewDelegate
-
 - (BOOL)godotViewFinishedSetup:(GodotView *)view;
-
 @end
+
+@protocol UIPencilInteraction;
 
 @interface GodotView : UIView
 
@@ -53,6 +53,7 @@ class String;
 @property(strong, readonly, nonatomic) CALayer<DisplayLayer> *renderingLayer;
 @property(assign, readonly, nonatomic) BOOL canRender;
 
+@property(class, nonatomic, readonly) UIPencilPreferredAction preferredTapAction;
 @property(assign, nonatomic) NSTimeInterval renderingInterval;
 
 - (CALayer<DisplayLayer> *)initializeRenderingForDriver:(NSString *)driverName;

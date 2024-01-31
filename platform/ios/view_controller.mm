@@ -166,6 +166,10 @@
 	[self displayLoadingOverlay];
 
 	[self setNeedsUpdateOfScreenEdgesDeferringSystemGestures];
+
+	UIPencilInteraction *pencilInteraction = [UIPencilInteraction new];
+	[pencilInteraction setDelegate:(GodotView<UIPencilInteractionDelegate> *)self.view];
+	[self.view addInteraction:pencilInteraction];
 }
 
 - (void)observeKeyboard {

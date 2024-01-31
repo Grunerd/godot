@@ -224,6 +224,7 @@ void DisplayServerIOS::touch_press(int p_idx, int p_x, int p_y, bool p_pressed, 
 	ev->set_position(Vector2(p_x, p_y));
 	ev->set_double_tap(p_double_click);
 	perform_event(ev);
+	print_error("touch_press!");
 }
 
 void DisplayServerIOS::touch_drag(int p_idx, int p_prev_x, int p_prev_y, int p_x, int p_y, float p_pressure, Vector2 p_tilt) {
@@ -243,6 +244,13 @@ void DisplayServerIOS::perform_event(const Ref<InputEvent> &p_event) {
 
 void DisplayServerIOS::touches_canceled(int p_idx) {
 	touch_press(p_idx, -1, -1, false, false);
+}
+
+void DisplayServerIOS::pencil_barrel_tap(){
+	Ref<InputEventPencilBarrelTap> ev;
+	ev.instantiate();
+	perform_event(ev);
+	print_error("pencil_barrel_tap!");
 }
 
 // MARK: Keyboard

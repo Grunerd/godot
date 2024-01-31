@@ -180,6 +180,7 @@ void register_core_types() {
 	GDREGISTER_CLASS(InputEventJoypadMotion);
 	GDREGISTER_CLASS(InputEventScreenDrag);
 	GDREGISTER_CLASS(InputEventScreenTouch);
+	GDREGISTER_CLASS(InputEventPencilBarrelTap);
 	GDREGISTER_CLASS(InputEventAction);
 	GDREGISTER_ABSTRACT_CLASS(InputEventGesture);
 	GDREGISTER_CLASS(InputEventMagnifyGesture);
